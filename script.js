@@ -73,8 +73,6 @@ moveSnow = (numberSnowflakes, init) => {
 
 // Workaround for inconsistent height of mobile browsers
 calculateHeight = () => {
-  console.log(document.querySelector('.container'));
-
   document.body.style.setProperty('--windowHeight', `${window.innerHeight}px`);
   document.querySelector('.container').style.setProperty('--windowHeight', `${window.innerHeight}px`);
 }
@@ -87,7 +85,7 @@ randomise = (range) => {
 // Calculate days until Christmas
 calculateChristmas = () => {
   const currentYear = new Date().getFullYear();
-  const christmas = new Date(currentYear, 11, 24);
+  const christmas = new Date(`${currentYear}-12-24T19:00:00`);
   const today = new Date;
 
   document.querySelector('.counter').innerHTML = Math.round((christmas - today) / (1000 * 60 * 60 * 24));
