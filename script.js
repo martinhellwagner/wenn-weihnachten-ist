@@ -73,8 +73,11 @@ moveSnow = (numberSnowflakes, init) => {
 
 // Workaround for inconsistent height of mobile browsers
 calculateHeight = () => {
+  const container = document.querySelector('.container');
+
   document.body.style.setProperty('--windowHeight', `${window.innerHeight}px`);
-  document.querySelector('.container').style.setProperty('--windowHeight', `${window.innerHeight}px`);
+  container.style.setProperty('--windowHeight', `${window.innerHeight}px`);
+  container.classList.add('container--ready');
 }
 
 // Randomise numbers in range

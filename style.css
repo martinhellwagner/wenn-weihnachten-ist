@@ -14,7 +14,13 @@ body {
   justify-content: center;
   min-height: var(--windowHeight);
   width: 100%;
+  opacity: 0;
+  transition: opacity 300ms linear;
   font-size: 40px;
+}
+
+.container--ready {
+  opacity: 1;
 }
 
 @media screen and (min-width: 320px) {
