@@ -54,7 +54,7 @@ span {
 .image {
   width: 100px;
   height: 100px;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 @media screen and (min-width: 320px) {
@@ -83,13 +83,13 @@ span {
 
 @media screen and (min-width: 320px) {
   .image {
-    margin-bottom: calc(24px + (48 - 24) * (100vw - 320px) / (1200 - 320));
+    margin-bottom: calc(26px + (52 - 26) * (100vw - 320px) / (1200 - 320));
   }
 }
 
 @media screen and (min-width: 1200px) {
   .image {
-    margin-bottom: 48px;
+    margin-bottom: 52px;
   }
 }
 
