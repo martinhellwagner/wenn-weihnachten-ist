@@ -1,0 +1,100 @@
+body {
+  width: 100vw;
+  height: var(--windowHeight);
+  margin: 0;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--windowHeight);
+  width: 100%;
+  font-size: 40px;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    font-size: calc(40px + (60 - 40) * (100vw - 320px) / (1200 - 320));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    font-size: 60px;
+  }
+}
+
+span {
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
+}
+
+.headline {
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 320px) {
+  .headline {
+    margin-bottom: calc(16px + (32 - 16) * (100vw - 320px) / (1200 - 320));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .headline {
+    margin-bottom: 32px;
+  }
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 320px) {
+  .image {
+    width: calc(100px + (140 - 100) * (100vw - 320px) / (1200 - 320));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .image {
+    width: 140px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .image {
+    height: calc(100px + (140 - 100) * (100vw - 320px) / (1200 - 320));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .image {
+    height: 140px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .image {
+    margin-bottom: calc(24px + (48 - 24) * (100vw - 320px) / (1200 - 320));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .image {
+    margin-bottom: 48px;
+  }
+}
+
+.counter {
+  font-weight: 700;
+}
+
+.snowflake {
+  position: fixed;
+  font-family: inherit;
+  z-index: 2412;
+  cursor: default;
+  color: #87cefa;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
