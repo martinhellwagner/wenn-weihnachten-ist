@@ -78,6 +78,8 @@ calculateHeight = () => {
   document.body.style.setProperty('--windowHeight', `${window.innerHeight}px`);
   container.style.setProperty('--windowHeight', `${window.innerHeight}px`);
   container.classList.add('container--ready');
+
+  initSnow();
 }
 
 // Randomise numbers in range
@@ -95,6 +97,5 @@ calculateChristmas = () => {
 }
 
 // Call functions
-calculateHeight();
-initSnow();
 calculateChristmas();
+calculateHeight();
