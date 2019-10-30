@@ -2,4 +2,4 @@
 
 ## Introduction
 
-Yet another Christmas Counter.
+Nothing to say really. Yet another Christmas Counter.
