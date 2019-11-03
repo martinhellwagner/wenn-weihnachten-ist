@@ -2,4 +2,4 @@
 
 ## Introduction
 
-Nothing to say really. Yet another Christmas Counter.
+This cute little code experiment implements a counter to once and for all answer the question that is on everyone's mind – how many days until Christmas?
