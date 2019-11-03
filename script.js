@@ -71,6 +71,11 @@ moveSnow = (numberSnowflakes, init) => {
   }, 50);
 }
 
+// Randomise numbers in range
+randomise = (range) => {
+  return Math.floor(range * Math.random());
+}
+
 // Workaround for inconsistent height of mobile browsers
 calculateHeight = () => {
   const container = document.querySelector('.container');
@@ -82,18 +87,14 @@ calculateHeight = () => {
   initSnow();
 }
 
-// Randomise numbers in range
-randomise = (range) => {
-  return Math.floor(range * Math.random());
-}
-
 // Calculate days until Christmas
 calculateChristmas = () => {
   const currentYear = new Date().getFullYear();
   const christmas = new Date(`${currentYear}-12-24T19:00:00`);
   const today = new Date;
+  const daysUntilChristmas = Math.round((christmas - today) / (1000 * 60 * 60 * 24));
 
-  document.querySelector('.counter').innerHTML = Math.round((christmas - today) / (1000 * 60 * 60 * 24));
+  document.querySelector('.counter').innerHTML = daysUntilChristmas === 0 ? 'Heute!' : daysUntilChristmas;
 }
 
 // Call functions
